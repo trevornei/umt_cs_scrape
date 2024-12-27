@@ -29,6 +29,8 @@ holds
 Each table has a row below the sub-table-header that describes a condition(s)
 for the sub-table to be met/fulfilled.
 
+![Courses sub-table commen](./tr_td.png "### Courses sub-table comment")
+
 The website uses `class="courselistcomment"` to describe each comment.
 
 - Core Courses: "Complete all of the following courses"
