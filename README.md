@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# umt_cs_scrape
-I am scraping the course requirements for my B.S. of Computer Science at the University of Montana.
-=======
 #Welcome.
 ###My Name is Trevor Nei - I'm a CS student at the University of Montana. Here is my first full stack web app. The purpose of this app is to scrape my degrees course requirements, to save the tabular data to a GH repo, and for a web app hosted by GH Pages to show my degree progress.
 
@@ -75,4 +71,3 @@ frontend/ # Next.js frontend
 └── ...
 
 ---
->>>>>>> de02bd3 (First commit)
