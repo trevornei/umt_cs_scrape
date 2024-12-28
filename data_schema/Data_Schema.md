@@ -56,5 +56,5 @@ Each Sub-Table has it's own attributes: 2.1
 `["codecol", "titlecol", "hourscol"]`
 
 Now that I've identified the target data ---> I can create an object called
-`'sub_table'` `\N` ---> Object Data Types: `\N`--->---> Course Number
-`\N`--->--->---> Course Title `\N`--->--->--->---> Credit Hours / Course
+`'sub_table'` ---> Object Data Types: \N --->---> Course Number \N --->--->--->
+Course Title \N --->--->--->---> Credit Hours / Course
