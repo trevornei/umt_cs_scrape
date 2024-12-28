@@ -54,3 +54,7 @@ for the sub-table to be met/fulfilled. The website uses
 
 Each Sub-Table has it's own attributes: 2.1
 `["codecol", "titlecol", "hourscol"]`
+
+Now that I've identified the target data ---> I can create an object called
+`'sub_table'` ---> Object Data Types: --->---> Course Number --->--->---> Course
+Title --->--->--->---> Credit Hours / Course
