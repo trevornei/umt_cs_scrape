@@ -9,6 +9,8 @@ response = requests.get(url)
 
 soup = bs4.BeautifulSoup(response.content, "html.parser")
 
+table = soup.find('table', class_='sc_courselist')
+print(table.prettify())
 # Create a class for sub_table.
 class sub_table:
     
@@ -25,6 +27,6 @@ class sub_table:
                 self.course = course
                 self.credit_hour = credit_hour
 
-# Create a class instance for each sub_tabel object.
-# Ref ~/cs_catalog/Data_Schema.md
+sub_tables = []
+
 
