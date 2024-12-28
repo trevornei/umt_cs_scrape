@@ -27,11 +27,10 @@ holds
 - Upper Division CS Electives
 
 Each table has a row below the sub-table-header that describes a condition(s)
-for the sub-table to be met/fulfilled.
+for the sub-table to be met/fulfilled. The website uses
+`class="courselistcomment"` to describe the above.
 
 ![Courses sub-table commen](./tr_td.png "### Courses sub-table comment")
-
-The website uses `class="courselistcomment"` to describe each comment.
 
 - Core Courses: "Complete all of the following courses"
 - Science Core: "Complete 1 of the following subcategories of science sequence",
@@ -45,3 +44,13 @@ The website uses `class="courselistcomment"` to describe each comment.
 - Advanced Software Electives: "Complete two of the following"
 - Upper Division CS Electives: "Complete 15 credits of the CSCI courses numbered
   300 and above."
+
+---
+
+# Target Data:
+
+1. Table: `<table>` (oneTable) || `sc_courselist`
+2. Sub-Table: `class="areheader"`
+
+Each Sub-Table has it's own attributes: 2.1
+`["codecol", "titlecol", "hourscol"]`
