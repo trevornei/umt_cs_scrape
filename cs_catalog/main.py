@@ -9,19 +9,13 @@ response = requests.get(url)
 
 soup = bs4.BeautifulSoup(response.content, "html.parser")
 
+# Snag the table
 table = soup.find('table', class_='sc_courselist')
-print(table.prettify())
 
-header = table.find_all('span', class_='courselistcomment areaheader')
-print(f'Whoa, these are the headers: {header}')
+# Create bucket for sub_table class instances.
+table_bucket = {}
 
-row = header.find_next('tr')
-for td in row:
-    td.find_all('td')
-    print(td)
-
-# Create a list to store sub_tables.
-# sub_tables_list = ['Core Courses', 'Science Core', 'Science Electives', 'Communications Requirement', 'Software Engineering Core', 'Advanced Software Electives', 'Upper Division CS Electives']
+current_header = None
 
 # Define the class before using it
 class sub_table:
@@ -35,19 +29,30 @@ class sub_table:
                 self.course = course
                 self.credit_hour = credit_hour
 
-# Correct the dictionary definition and instantiation
-table_bucket = {
-    'core_courses': sub_table(None),
-    'science_core': sub_table(None),
-    'science_electives': sub_table(None),
-    'communications_requirement': sub_table(None),
-    'software_engineering_core': sub_table(None),
-    'advanced_software_electives': sub_table(None),
-    'upper_division_cs_electives': sub_table(None)
-}
+for row in table.find_all('tr'):
+    # Check for a header
+    header = row.find('span', class_='courselistcomment')
+    if header:
+        current_header = header.text.strip()
+        if current_header not in table_bucket:
+            table_bucket[current_header] = sub_table(core_header=current_header)
+        else:
+            # Check if the row contains course details
+            course_code_td = row.find('td', class_='codecol')
+            course_name_td = row.find_all('td')[1] if len(row.find_all('td')) > 1 else None
+            credit_hour_td = row.find('td', class_='hourscol')
 
-for header in table.find_all('tr', class_='courselistcomment areheader'):
-    print(header.text.strip())  
-    #     table_bucket['upper_division_cs_electives'].core_header = header.text
+            # If there is a course code and a name then snag the text for all three td's.
+            if course_code_td and course_name_td:
+                course_code = course_code_td.text.strip()
+                course_name = course_name_td.text.strip()
+                credit_hour = credit_hour_td.text.strip() if credit_hour_td else ""
 
-# print(table_bucket)
+                # Add the row to the current header...
+                if current_header in table_bucket:
+                    table_bucket[current_header].rows.append(
+                        sub_table.row(course_code, course_name, credit_hour)
+                    )
+                
+
+        
