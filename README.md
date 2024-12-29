@@ -11,7 +11,7 @@ and for a web app hosted by GH Pages to show my degree progress.
 - FE: Next.js
 - BE: Django & BS4
 
-Here is the high level of the data of interest.
+## Here is the high level of the data of interest.
 
 1. Table listing cs undergrad requirements for software engineerign
    concentration.
