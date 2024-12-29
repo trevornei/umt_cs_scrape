@@ -1,0 +1,66 @@
+{
+    "Computer Science Core Courses": {
+        "core_header": "Computer Science Core Courses",
+        "rows": []
+    },
+    "Complete all of the following courses:": {
+        "core_header": "Complete all of the following courses:",
+        "rows": []
+    },
+    "Science Core": {
+        "core_header": "Science Core",
+        "rows": []
+    },
+    "Rule: Complete 1 of the following subcategories of science sequences. 9-10 total credits required.": {
+        "core_header": "Rule: Complete 1 of the following subcategories of science sequences. 9-10 total credits required.",
+        "rows": []
+    },
+    "Biology Sequence Option": {
+        "core_header": "Biology Sequence Option",
+        "rows": []
+    },
+    "Chemistry Sequence Option": {
+        "core_header": "Chemistry Sequence Option",
+        "rows": []
+    },
+    "Physics Sequence Option": {
+        "core_header": "Physics Sequence Option",
+        "rows": []
+    },
+    "Science Electives": {
+        "core_header": "Science Electives",
+        "rows": []
+    },
+    "Complete two of the following courses. Laboratory courses must be taken in conjunction with their associated lecture course. The Biology, Chemistry, or Physics sequence chosen to fulfill the science core may not count toward the science electives requirement.": {
+        "core_header": "Complete two of the following courses. Laboratory courses must be taken in conjunction with their associated lecture course. The Biology, Chemistry, or Physics sequence chosen to fulfill the science core may not count toward the science electives requirement.",
+        "rows": []
+    },
+    "Communication Requirement": {
+        "core_header": "Communication Requirement",
+        "rows": []
+    },
+    "Complete one of the following courses:": {
+        "core_header": "Complete one of the following courses:",
+        "rows": []
+    },
+    "Software Engineering Concentration Required Courses": {
+        "core_header": "Software Engineering Concentration Required Courses",
+        "rows": []
+    },
+    "Software Engineering Concentration Advanced Software Electives": {
+        "core_header": "Software Engineering Concentration Advanced Software Electives",
+        "rows": []
+    },
+    "Complete two of the following courses:": {
+        "core_header": "Complete two of the following courses:",
+        "rows": []
+    },
+    "Software Engineering Concentration Upper-Division Computer Science Electives": {
+        "core_header": "Software Engineering Concentration Upper-Division Computer Science Electives",
+        "rows": []
+    },
+    "Complete 15 credits of CSCI courses numbered 300 and above.": {
+        "core_header": "Complete 15 credits of CSCI courses numbered 300 and above.",
+        "rows": []
+    }
+}
