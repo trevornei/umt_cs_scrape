@@ -19,3 +19,7 @@ Here is the high level of the data of interest.
    Core'  
    2.1 each sub section has it's own series of table rows with three columns of
    important data. `<td>`(3) ->School -->Course Title --->Credit Hours / Class
+
+## If you're interested in reading more about the data harvesting method...
+
+[Read more about the data harvesting method here](data_schema/Data_Schema.md)
