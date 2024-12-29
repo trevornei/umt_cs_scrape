@@ -39,6 +39,7 @@ table_bucket = {
 }
 
 for header in table.find_all('tr', class_='areheader'):
+    print(f"The value of this header is: {header.text}")
     if header.text == 'Computer Science Core Courses':
         table_bucket['core_courses'].core_header = header.text
     elif header.text == 'Science Core':
