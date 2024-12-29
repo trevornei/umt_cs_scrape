@@ -54,5 +54,20 @@ for row in table.find_all('tr'):
                         sub_table.row(course_code, course_name, credit_hour)
                     )
                 
+# Convert to JSON
+output = {
+    key: {
+        "core_header": table_bucket[key].core_header,
+        "rows": [
+            {
+                "course_code": row.course_code,
+                "course_name": row.course_name,
+                "credit_hour": row.credit_hour, 
+            }
+            for row in table_bucket[key].rows
+        ],
+    }
+    for key in table_bucket
+}
 
-        
+print(json.dumps(output, indent=4))
