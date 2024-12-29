@@ -10,7 +10,15 @@ response = requests.get(url)
 soup = bs4.BeautifulSoup(response.content, "html.parser")
 
 table = soup.find('table', class_='sc_courselist')
-# print(table.prettify())
+print(table.prettify())
+
+header = table.find_all('span', class_='courselistcomment areaheader')
+print(f'Whoa, these are the headers: {header}')
+
+row = header.find_next('tr')
+for td in row:
+    td.find_all('td')
+    print(td)
 
 # Create a list to store sub_tables.
 # sub_tables_list = ['Core Courses', 'Science Core', 'Science Electives', 'Communications Requirement', 'Software Engineering Core', 'Advanced Software Electives', 'Upper Division CS Electives']
@@ -38,21 +46,8 @@ table_bucket = {
     'upper_division_cs_electives': sub_table(None)
 }
 
-for header in table.find_all('tr', class_='areheader'):
-    print(f"The value of this header is: {header.text}")
-    if header.text == 'Computer Science Core Courses':
-        table_bucket['core_courses'].core_header = header.text
-    elif header.text == 'Science Core':
-        table_bucket['science_core'].core_header = header.text
-    elif header.text == 'Science Electives':
-        table_bucket['science_electives'].core_header = header.text
-    elif header.text == 'Communications Requirement':
-        table_bucket['communications_requirement'].core_header = header.text
-    elif header.text == 'Software Engineering Core':
-        table_bucket['software_engineering_core'].core_header = header.text
-    elif header.text == 'Advanced Software Electives':
-        table_bucket['advanced_software_electives'].core_header = header.text
-    elif header.text == 'Upper Division CS Electives':
-        table_bucket['upper_division_cs_electives'].core_header = header.text
+for header in table.find_all('tr', class_='courselistcomment areheader'):
+    print(header.text.strip())  
+    #     table_bucket['upper_division_cs_electives'].core_header = header.text
 
-print(table_bucket)
+# print(table_bucket)
