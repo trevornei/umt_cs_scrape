@@ -2,7 +2,7 @@
 
 ### My Name is Trevor Nei - I'm a CS student at the University of Montana
 
-Montana. Here is my first full stack web app. The purpose of this app is to
+Here is my first full stack web app. The purpose of this app is to
 scrape my degrees course requirements, to save the tabular data to a GH repo,
 and for a web app hosted by GH Pages to show my degree progress.
 
