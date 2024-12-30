@@ -4,7 +4,7 @@
 
 Here is my first full stack web app. The purpose of this app is to
 scrape my degrees course requirements, to save the tabular data to a GH repo,
-and for a web app hosted by GH Pages to show my degree progress.
+and deploy the application with Vercel.
 
 ##### About the Stack:
 
